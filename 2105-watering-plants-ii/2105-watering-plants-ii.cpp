@@ -1,6 +1,7 @@
 class Solution {
 public:
     int minimumRefill(vector<int>& plants, int capacityA, int capacityB) {
+      // Quality Code 
       int i = 0, j = plants.size() - 1, canA = capacityA, canB = capacityB, res = 0;
       while (i < j) {
         res += (canA < plants[i]) + (canB < plants[j]);
@@ -11,6 +12,7 @@ public:
       }
       return res + (i == j && max(canA, canB) < plants[i]);
       
+      // Method 2
 //       int n = plants.size();
 //       int a=0, b=n-1, waterA=capacityA, waterB=capacityB, refills=0;
       
