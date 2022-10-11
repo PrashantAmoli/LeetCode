@@ -6,13 +6,13 @@ public:
       if(dp[target] != -1) return dp[target];
       
       int ans = 0;
-      for(int i=0 ; i<n && nums[i] <= target ; i++)
-        ans += solve(n, target-nums[i], nums);
+      for(int i=0 ; i<n ; i++)
+        if( nums[i] <= target )
+          ans += solve(n, target-nums[i], nums);
       return dp[target] = ans;
     }
   
     int combinationSum4(vector<int>& nums, int target) {
-      sort(nums.begin(), nums.end());
       int n = nums.size();
       dp.resize(target+1, -1);
       return solve(n, target, nums);
