@@ -24,23 +24,3 @@ waterB -= plants[b];
 break;
 }
 ​
-// Alice
-if(waterA < plants[a]){
-waterA = capacityA;
-refills++;
-}
-waterA -= plants[a];
-​
-// Bob
-if(waterB < plants[b]){
-waterB = capacityB;
-refills++;
-}
-waterB -= plants[b];
-​
-a++;
-b--;
-}
-return refills;
-}
-```
