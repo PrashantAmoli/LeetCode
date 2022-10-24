@@ -1,3 +1,5 @@
+Runtime: 3 ms, faster than 98.05% of C++ online submissions for Maximum Length of a Concatenated String with Unique Characters.
+Memory Usage: 8.2 MB, less than 86.03% of C++ online submissions for Maximum Length of a Concatenated String with Unique Characters.
 ```
 int ans = 0;
 ​
@@ -32,10 +34,6 @@ s.pop_back();
 solve(i+1, s, arr, used);
 }
 ​
-int maxLength(vector<string>& arr) {
-vector<int> used(26, 0);
-string s = "";
-solve(0, s, arr, used);
-return ans;
-}
-```
+void solveFast(int i, string &s, vector<string>& arr, vector<int>& used){
+if(i == arr.size())
+return;
